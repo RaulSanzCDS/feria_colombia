@@ -1,7 +1,27 @@
-# Telemetría Térmica - Pabellón Principal (Feria Colombia)
+# Sistema de Telemetría Térmica - Gran Feria de Colombia (Versión Estable)
 
-Sistema de recolección y análisis de telemetría de multitudes para el Centro de Operaciones.
+Módulo de calibración térmica y recuperación de señales del pabellón principal.
 
-> [!WARNING]
-> Repositorio en mantenimiento tras la detección de exfiltración de telemetría.
-> Consulte el historial de despliegues y las versiones de calibración.
+## Instrucciones de Despliegue con Docker
+
+### 1. Construir la imagen localmente:
+```bash
+docker build -t feria_colombia:estable .
+```
+
+### 2. Ejecutar la calibración:
+De forma interactiva:
+```bash
+docker run -it feria_colombia:estable
+```
+O pasando las coordenadas del epicentro térmico como variable de entorno:
+```bash
+docker run -it -e COORDS="1254,235" feria_colombia:estable
+```
+
+### 3. Registro en Docker Hub (Opcional):
+Si se desea distribuir la imagen en Docker Hub:
+```bash
+docker tag feria_colombia:estable <tu_usuario_dockerhub>/feria_colombia:estable
+docker push <tu_usuario_dockerhub>/feria_colombia:estable
+```
