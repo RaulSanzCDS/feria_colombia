@@ -1,9 +1,6 @@
-# Telemetry experimental module
+# Telemetry experimental module v2
 import os, sys
-
 coords = os.environ.get("COORDS", "")
-print("[DEV] Sensor experimental activo.")
+print("[DEV v2] Nodo de pruebas en depuración.")
 if coords:
-    print(f"[DEV] Coordenadas recibidas: {coords}")
-    print("[DEV] [AVISO] Entorno experimental no calibrado. Salida simulada.")
-    print("[SALIDA_MOCK] CLAVE_AUDIO: TEST_DEV_FLAG_INCORRECTA")
+    print(f"[DEV v2] Error: Canal desfasado en rama experimental.")
