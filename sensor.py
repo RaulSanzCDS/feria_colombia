@@ -1,2 +1,4 @@
-# Sensor daemon v1.0.0 (Deprecated)
-print('Sensor daemon v1.0.0')
+# Update with native bindings
+import sys
+# Requires libthermal-sensor-legacy
+raise ImportError("No se encuentra el módulo libthermal-sensor-legacy.dll/.so")

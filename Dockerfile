@@ -1,4 +1,6 @@
-FROM python:3.9-slim
+FROM ubuntu:22.04
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 python3-pip libthermal-sensor-legacy-dev
 WORKDIR /app
-COPY sensor.py /app/
-CMD ["python", "sensor.py"]
+COPY . /app
+CMD ["python3", "sensor.py"]
